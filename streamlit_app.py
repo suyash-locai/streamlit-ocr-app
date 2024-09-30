@@ -4,7 +4,7 @@ import requests
 st.title("Upload file for the character recognition (PNG and JPEG are supported)")
 
 # File uploader UI
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("Upload File")
 
 if uploaded_file is not None:
     # Convert the uploaded file to bytes

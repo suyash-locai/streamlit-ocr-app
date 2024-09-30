@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("File Upload to FastAPI")
+st.title("Upload file for the character recognition (PNG and JPEG are supported)")
 
 # File uploader UI
 uploaded_file = st.file_uploader("Choose a file")

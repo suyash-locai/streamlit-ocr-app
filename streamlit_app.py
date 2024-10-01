@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Upload file for the character recognition (PNG and JPEG are supported)")
+st.title("Upload file for the character recognition (PNG/JPG)")
 
 # File uploader UI
 uploaded_file = st.file_uploader("Upload File")

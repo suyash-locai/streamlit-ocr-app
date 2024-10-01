@@ -20,10 +20,25 @@ st.title("OCR Demo")
 st.write("")
 st.write("")
 
+with open("README.md", "r") as file:
+    readme_text = file.read()
+
+# Display the README.md content in the Streamlit app
+st.markdown(readme_text, unsafe_allow_html=True)
+
+st.write("")
+st.write("")
+
+
+st.header('API Playground')
+st.write("")
+
 api_key = st.text_input("API Key (auto-generated)", value=get_random_api_key())
 
+st.write("")
+
 # File uploader UI
-st.header("Upload file for the character recognition (PNG/JPG)")
+st.subheader("Upload file for the character recognition (PNG/JPG)")
 uploaded_file = st.file_uploader("Upload File")
 
 if uploaded_file is not None:
@@ -48,7 +63,7 @@ st.write("")
 st.write("")
 
 # Section 2: String List Submission UI
-st.header("Submit list of uploaded (in S3) file names for the bulk character recognition (PNG/JPG)")
+st.subheader("Submit list of uploaded (in S3) file names for the bulk character recognition (PNG/JPG)")
 
 # Input list of strings in Streamlit using the textarea
 string_input = st.text_area("Enter S3 object keys (one per line)", "")
@@ -73,7 +88,7 @@ st.write("")
 st.write("")
 
 # Section 3: Get Batch Job Status UI
-st.header("Check Batch Job Status")
+st.subheader("Check Batch Job Status")
 
 # Input field for job_id
 job_id = st.text_input("Enter Job ID")

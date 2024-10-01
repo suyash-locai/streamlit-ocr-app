@@ -20,7 +20,7 @@ st.title("OCR Demo")
 st.write("")
 st.write("")
 
-api_key = st.text_input("Enter API Key (auto-populated with random key)", value=get_random_api_key())
+api_key = st.text_input("API Key (auto-generated)", value=get_random_api_key())
 
 # File uploader UI
 st.header("Upload file for the character recognition (PNG/JPG)")

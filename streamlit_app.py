@@ -33,7 +33,8 @@ st.write("")
 st.header('API Playground')
 st.write("")
 
-api_key = st.text_input("API Key (auto-generated)", value=get_random_api_key())
+# api_key = st.text_input("API Key (auto-generated)", value=get_random_api_key())
+api_key = st.text_input("API Key")
 
 st.write("")
 

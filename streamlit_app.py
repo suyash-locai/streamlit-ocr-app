@@ -2,14 +2,15 @@ import streamlit as st
 import requests
 import random
 
-hide_footer_style = """
+hide_streamlit_style = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    footer:after {content:''; visibility: hidden; display: none;}
+    #MainMenu {visibility: hidden;} /* Hides the hamburger menu */
+    footer {visibility: hidden;} /* Hides the footer */
+    .css-2trqyj {visibility: hidden;} /* Hides the GitHub "Fork" button */
+    .css-1lsmgbg {visibility: hidden;} /* Hides the GitHub user icon at the bottom */
     </style>
 """
-st.markdown(hide_footer_style, unsafe_allow_html=True)
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Hardcoded users for demo purposes
 USER_DATA = {

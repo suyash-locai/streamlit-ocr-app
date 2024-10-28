@@ -2,6 +2,15 @@ import streamlit as st
 import requests
 import random
 
+hide_footer_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    footer:after {content:''; visibility: hidden; display: none;}
+    </style>
+"""
+st.markdown(hide_footer_style, unsafe_allow_html=True)
+
 # Hardcoded users for demo purposes
 USER_DATA = {
     "test@mail.com": "test123",
